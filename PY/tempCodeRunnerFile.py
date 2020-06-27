@@ -1,1 +1,1 @@
-BUFSIZ
+cv2.imshow('frame', gray)

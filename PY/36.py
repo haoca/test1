@@ -8,3 +8,4 @@ for line1 in f:
     print(accout_id)
     print(line1, end='')
 f.close()
+import this

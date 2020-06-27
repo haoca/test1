@@ -13,3 +13,17 @@ import win32com.client as win
 speak = win.Dispatch("SAPI.SpVoice")
 speak.Speak("come on")
 speak.Speak('现在时间为:'+str(current_date)[0:-10])
+# import turtle
+
+# turtle.pensize(10)
+# turtle.pencolor('red')
+
+# turtle.forward(200)
+# turtle.right(90)
+# turtle.forward(100)
+# turtle.right(90)
+# turtle.forward(100)
+# turtle.right(90)
+# turtle.forward(100)
+
+# turtle.mainloop()
