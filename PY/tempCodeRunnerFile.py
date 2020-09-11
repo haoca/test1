@@ -1,2 +1,1 @@
-
-        print('\nwrong\n')
+response = response.read()
