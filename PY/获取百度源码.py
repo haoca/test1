@@ -1,7 +1,17 @@
 from urllib import request
-
-response = request.urlopen("http://www.baidu.com/")  # 打开网站
+import json
+import os
+import urllib,urllib.request, sys
+import ssl
+import urllib.request
+import base64
+import cv2
+global token
+response = urllib.request.urlopen("http://www.baidu.com/")  # 打开网站
+# response = response.read()
 fi = open("project.txt", 'w')                        # open一个txt文件
-page = fi.write(str(response.read()))                # 网站代码写入
-fi.close()       
+page = fi.write(str(json.(response.read())))                # 网站代码写入
+fi.close()
+os.system('project.txt')
+# .\project.txt       
 print(1)

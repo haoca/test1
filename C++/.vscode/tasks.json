@@ -1,0 +1,38 @@
+{
+
+        "version": "2.0.0",
+    
+        "tasks": [
+    
+            {
+    
+    "label":"g++",/*任务名称，等同与0.1.0版本中的taskName，         */
+    
+                               /*与launch.json中的"preLaunchTask"内容一致     */
+     "type": "shell",
+
+    "command": "g++",
+    "args": [
+        "-g",
+        "${file}",
+        "-lwsock32",
+        "-o",
+        
+        "${fileBasenameNoExtension}.exe"
+    ], // 编译命令参数
+    "problemMatcher": {
+        "owner": "cpp",
+        "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+        ],
+        "pattern": {
+            "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+            "file": 1,
+            "line": 2,
+            "column": 3,
+            "severity": 4,
+            "message": 5
+        }
+    }
+ }
