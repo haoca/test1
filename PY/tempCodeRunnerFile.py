@@ -1,1 +1,1 @@
-response = response.read()
+loba
