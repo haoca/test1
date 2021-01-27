@@ -1,10 +1,22 @@
 import sys
 import os
-
 import base64
 import requests
-import json
-import uuid
+
+
+def isConnected():
+
+    try:
+        html = requests.get("http://www.baidu.com", timeout=2)
+        html = str(html.content)
+        flag = html.find('www.hao123.com')
+        # print(html, flag, '\n1')
+        if flag >= 0:
+            return 1
+        else:
+            return 0
+    except:
+        return False
 
 
 def get_mac_address():
@@ -40,16 +52,14 @@ def jiami(password1):
 
 
 def connect():
-    # hit_me()
-    # username = '123'
-    password1 = 'a13307023186'
 
-    # added_thread.start()
-    # print(username, password1)
+    username = '301737'
+    password1 = 'a13307023186'  # 更改为自己对应的卡号，密码。
+
+    print('校园卡号'+username, '\n校园网密码'+password1)
 
     s = requests.session()
-    # node = (node=uuid.getnode())
-    # mac = str(uuid.UUID(int=node).hex[-12:])
+
     res1 = s.post(
         url=r"http://172.30.16.34/srun_portal_pc.php?ac_id=1&",
         headers={
@@ -78,15 +88,18 @@ def connect():
 
 
             "user_mac": get_mac_address(),
-            "username": '301737',
+            "username": username,
         },
 
 
 
 
     )
-    print('登陆成功')
 
 
 if __name__ == "__main__":
-    connect()
+    # connect()
+    if isConnected():
+        print('登陆成功！')
+    else:
+        print('登录失败或者您已经注销！')

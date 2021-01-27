@@ -4,3 +4,5 @@ from torch.autograd import Variable
 x = torch.linspace(-5, 5, 200)
 x = Variable(x)
 x_np = dummy.date.numpy()
+
+y_relu = F.relu()

@@ -39,8 +39,8 @@ class Ui_Dialog(object):
         self.clearBtn.setObjectName("clearBtn")
 
         self.retranslateUi(Dialog)
-        self.queryBtn.clicked.connect(Dialog.accept)
-        self.clearBtn.clicked.connect(Dialog.accept)
+        self.queryBtn.clicked.connect(Dialog.connect)
+        # self.clearBtn.clicked.connect(Dialog.accept)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
@@ -51,12 +51,12 @@ class Ui_Dialog(object):
         self.queryBtn.setText(_translate("Dialog", "登录"))
         self.clearBtn.setText(_translate("Dialog", "清空"))
 
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Dialog = QtWidgets.QDialog()
-    ui = Ui_Dialog()
-    ui.setupUi(Dialog)
-    Dialog.show()
-    sys.exit(app.exec_())
+#
+# if __name__ == "__main__":
+#     import sys
+#     app = QtWidgets.QApplication(sys.argv)
+#     Dialog = QtWidgets.QDialog()
+#     ui = Ui_Dialog()
+#     ui.setupUi(Dialog)
+#     Dialog.show()
+#     sys.exit(app.exec_())

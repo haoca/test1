@@ -8,7 +8,7 @@ window.geometry('400x300')
 l = tk.Label(window, text='NO.1', anchor='w',
              font=('Arial', 12), width=30, height=2)
 
-e1 = tk.Entry(window, show=None, relief='ridge')
+e1 = tk.Entry(window, show=None)
 l.pack()
 e1.pack()
 l = tk.Label(window, text='NO.2',

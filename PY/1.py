@@ -1,4 +1,3 @@
-import math
 #int m
 # hello how are you?
 while True:
@@ -14,9 +13,3 @@ while True:
   a=(type(ten)==int)
   print(type(ten),a)
   
-'''
-  c=3
-  a=1+ten
-  b='abc'
-  print(a,b,c)
-'''
