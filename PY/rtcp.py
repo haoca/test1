@@ -22,7 +22,7 @@ import threading
 import time
 
 
-streams = [None, None]  # 存放需要进行数据转发的两个数据流（都是 SocketObj 对象）
+streams = ['127.0.0.1', '4355']  # 存放需要进行数据转发的两个数据流（都是 SocketObj 对象）
 debug = 1  # 调试状态 0 or 1
 
 
@@ -48,7 +48,7 @@ def _get_another_stream(num):
 
         if streams[num] is not None:
             return streams[num]
-        elif streams[num] is None and streams[num^1] is None:
+        elif streams[num] is None and streams[num ^ 1] is None:
             print('stream CLOSED')
             return None
         else:
