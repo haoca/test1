@@ -1,8 +1,11 @@
 from lxml import etree
 import base64
-import json,pprint
+import json
+import pprint
 import requests
-import urllib,urllib.request, sys
+import urllib
+import urllib.request
+import sys
 import ssl
 import cv2
 from html.parser import HTMLParser
@@ -18,7 +21,7 @@ wb_data = content
 
 # print(content)
 html = etree.HTML(wb_data)
-str = html.xpath('//*[@id="upload-btn"]/span') 
+str = html.xpath('//*[@id="upload-btn"]/span')
 print(html)
 print(str)
 for i in str:
@@ -26,7 +29,7 @@ for i in str:
     for k in i:
         print(k)
 # tree1 = html.tostring(html[0])
-#编码'utf-8'
+# 编码'utf-8'
 # tree2 = HTMLParser().unescape(tree1.decode('utf-8'))
 # print(tree2)
 # print(str)
