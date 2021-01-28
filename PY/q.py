@@ -1,6 +1,7 @@
 # login='abcd1'
 # print(login.count('1'))
 import os
+<<<<<<< HEAD
 import threading
 
 
@@ -22,3 +23,6 @@ def a2():
 
 threading.Thread(target=a1, args=()).start()
 threading.Thread(target=a2, args=()).start()
+=======
+os.system('ipconfig')
+>>>>>>> be6ea9a384eb25ab5650f94bbe4f0e788db32bb1
