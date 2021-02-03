@@ -12,7 +12,7 @@ global token
 response = urllib.request.urlopen("http://www.baidu.com/")  # 打开网站
 # response = response.read()
 fi = open("project.txt", 'w')                        # open一个txt文件
-page = fi.write(str(json.(response.read())))                # 网站代码写入
+page = fi.write(str((response.read())))                # 网站代码写入
 fi.close()
 os.system('project.txt')
 # .\project.txt

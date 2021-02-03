@@ -18,3 +18,4 @@ presenters = [{'name': 'huhujjjjjjj', 'age': '19'},
 print(presenters)
 presenters.sort(key=sorter)
 print(presenters)
+pri
