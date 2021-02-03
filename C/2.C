@@ -1,15 +1,9 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-    int a,count= 0;
-    //printf("请输入要数位数的数：\n");
-    while( count >= 0 )
-    {
-    /*  
-            printf("%d\n",count);
-    */
-        count ++;
-    }
-    printf("最大int型数是：%d\n",count-1);
-    return 0;
+    int nums = 1, target = 9;
+    int a, count = 0;
+    int num[5] = {0};
+    a = sizeof(num) / 4;
+    printf("%d", a);
 }
