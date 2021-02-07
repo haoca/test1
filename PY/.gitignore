@@ -6,3 +6,6 @@
 /__pycache__/
 /build/
 /dist/
+*.zip
+*.mp4
+*.rar

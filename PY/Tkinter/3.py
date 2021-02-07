@@ -6,7 +6,7 @@ window.title('计算器')
 window.geometry('400x300')
 
 var1 = tk.StringVar()
-l = tk.Label(window, bg='yellow', width=12,
+l = tk.Label(window, bg='white', width=12,
              font=('Arial', 12), textvariable=var1)
 l.pack()
 

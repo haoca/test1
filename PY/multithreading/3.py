@@ -8,7 +8,7 @@ def thread_job():
     for i in range(10):
         time.sleep(0.1)  # 任务间隔0.1s
     print("T1 finish\n")
-
+   
 
 def job(l, q):
     for i in range(len(l)):
